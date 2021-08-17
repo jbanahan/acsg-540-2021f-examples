@@ -19,9 +19,13 @@ git config --global user.email johndoe@example.com
 git config user.name 
 ```
 
-3. Authenticate you local machine with GitHub
-Follow instructions here and watch the related course video
-https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+3. Authenticate you local machine with GitHub by using the following tutorials or downloading GitHub for Desktop
+
+    - Download GitHub for desktop https://desktop.github.com/
+    or
+    - Follow instructions here and watch the related course video
+        - [Generating a secret](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+        - [Give that secret to Github](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 3. Create your local project directory space
     1. Create directory
