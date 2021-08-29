@@ -10,12 +10,25 @@
     <h1>Welcome New User</h1>
     <p>Hello new user! Thank you for taking the time to register! Please fill out the form completely.</p>
 
-    <form>
+    <form method="GET" action="http://acsg540.com/~ubuntu/acsg-540-2021f-examples/week3/list_data.php">
         <!-- Two different ways of labeling inputs -->
         <label>Full Name: <input id="fullName" name="fullName" type="text"></label></br>
 
         <label for="username">Username:</label>
-        <input id="username" name="username" type="text">
+        <input id="username" name="username" type="text"><br />
+
+        <!-- Radio button group -->
+        Specify a credit card<br />
+        <label><input type="radio" name="creditcard" value="visa" /> Visa</label><br />
+        <label><input type="radio" name="creditcard" value="mc" /> Master Card</label><br />
+        <label><input type="radio" name="creditcard" value="ax" /> American Express</label><br />
+        <!-- Checkbox group -->
+        What are your interests?<br />
+        <label><input type="checkbox" name="interests[]" value="movies" /> Movies</label><br />
+        <label><input type="checkbox" name="interests[]" value="school" /> School</label><br />
+        <label><input type="checkbox" name="interests[]" value="sports" /> Sports</label><br />
+
+        <input type="submit" value="Register" />
     </form>
 </body>
 
