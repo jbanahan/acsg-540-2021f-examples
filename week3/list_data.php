@@ -10,16 +10,41 @@
   </head>
   <body>
 	<main class="container">
-    		<h1>Submitted Values</h1> 
+	<?php if ($_SERVER['REQUEST_METHOD'] === 'GET'){ ?>
+    	<h1>Submitted Values</h1> 
 		<table class="table">
 		  <caption>The Values Submitted</caption>
 		  <tr>
 			<th>Key</th>
 			<th>Value</th>
 		  </tr>
-		  
-		  		</table>
-		</main>
+		  <!-- cycle thorugh all possible keys -->
+		  <?php foreach ($_GET as $key => $value) : ?>
+		  <tr>
+			  <td><?php echo $key; ?></td>
+			  <!-- If our value is an array then echo out each value in the array otherwise just echo out the value -->
+			  <?php
+			  if (is_array($value)){
+					echo "<td>";
+					for ($i = 0; $i < sizeof($value); $i++) {
+						if (!$i == 0){
+							echo ",";
+						}
+						echo $value[$i];
+					}
+					echo "</td>";
+				} else {
+					echo "<td>".$value."</td>";
+				} ?>
+		  </tr>
+		  <?php endforeach; ?>
+		</table>
+	<?php }else{ ?>
+		<div class="alert alert-danger" role="alert">
+			This page can only be used for GET requests!
+	  	</div>
+	<?php } ?>
+	</main>
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
