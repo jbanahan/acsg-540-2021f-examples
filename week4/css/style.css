@@ -1,0 +1,42 @@
+body {
+    font-family: Allison, "Times New Roman", C059, DejaVu, serif;
+    background-color: lightgray;
+    font-size: 0.95em;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: sans-serif;
+}
+
+p {
+    background-color: darkgreen;
+    border: medium solid;
+}
+
+#title {
+    text-align: center;
+    font-size: 400%;
+    font-variant: small-caps;
+    background-color: rgb(0, 255, 255);
+    color: #000000;
+}
+
+em.highlighted {
+    background-color: yellow;
+}
+
+ol ol > li > ol {
+    list-style-type: georgian;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    font-size: x-large;
+}
