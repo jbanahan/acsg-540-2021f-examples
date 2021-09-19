@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+h1 {
+    background-color: rgb(148, 255, 163);
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-bottom: 10px;
+    font-size: 300%;
+}
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+.main-content {
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 800px; */
+
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.highlighted {
+    background-color: yellow;
+}
+
+.aside {
+    float: right;
+    background-color: gainsboro;
+    border: 1px solid black;
+    font-style: italic;
+    margin-left: 16px;
+    margin-right: 16px;
+}
