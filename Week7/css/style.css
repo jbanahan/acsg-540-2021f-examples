@@ -1,0 +1,11 @@
+code {
+    background-color: #ffffff;
+    padding: 3px;
+}
+
+.error {
+    background-color: #ffc7ce;
+    color: #9d0005;
+    border: 1px solid #9d0005;
+    padding: 15px;
+}
