@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Objects Example</title>
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        // Passing parameters which have local scope
+        function subtraction(val1, val2) {
+            return val1 - val2;
+        }
+
+        function multiply(val1, val2) {
+            return val1 * val2;
+        }
+
+        // Global variables
+        function divide() {
+            return a / b;
+        }
+
+        // Object variables
+        function Calculator(val1, val2) {
+            this.val1 = val1;
+            this.val2 = val2;
+
+            this.addition = function () {
+                return this.val1 + this.val2;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Week 8 Example - Objects and Scope</h1>
+    <script type="text/javascript">
+        var a = 7;
+        var b = 10;
+
+        var calc = new Calculator(a, b);
+
+        var sum = calc.addition();
+        var diff = subtraction(calc.val1, calc.val2);
+        var product = multiply(a, b);
+        var quotient = divide();
+
+        document.write("<table>");
+        document.write("<tr><td>Sum</td><td>" + sum + "</td></tr>");
+        document.write("<tr><td>Difference</td><td>" + diff + "</td></tr>");
+        document.write("<tr><td>Product</td><td>" + product + "</td></tr>");
+        document.write("<tr><td>Quotient</td><td>" + quotient + "</td></tr>");
+        document.write("</table>");
+    </script>
+</body>
+
+</html>
