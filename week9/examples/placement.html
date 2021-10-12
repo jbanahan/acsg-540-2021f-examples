@@ -3,21 +3,45 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>JS Placement Example</title>
+    <title>Form Validation Example</title>
+
+    <script type="text/javascript">
+        function checkForm() {
+            if (document.getElementById("txtFirstName").value == "") {
+                return false;
+            }
+
+            if (document.getElementById("txtLastName").value == "") {
+                return false;
+            }
+
+            if (document.getElementById("txtEmail").value == "") {
+                return false;
+            }
+
+            return true;
+        }
+    </script>
 </head>
 
 <body>
-    <h1>Registration</h1>
+    <h1>Registration Form</h1>
     <p>All fields are required</p>
-    <form method="get" id="frmTheForm">
+    <!-- <form method="get" id="theForm" onsubmit="return checkForm();"> -->
+    <form method="get" id="theForm"></form>
         <label for="txtFirstName">First Name: </label>
         <input type="text" name="txtFirstName" id="txtFirstName" /><br />
         <label for="txtLastName">Last Name: </label>
         <input type="text" name="txtLastName" id="txtLastName" /><br />
         <label for="txtEmail">Email: </label>
         <input type="text" name="txtEmail" id="txtEmail" /><br />
-        <input type="submit" id="btnSubmit" value="REGISTER" />
+        <input type="submit" id="btnSubmit" value="register" />
     </form>
+
+    <script type="text/javascript">
+        var input = document.getElementById("theForm");
+        input.onsubmit = checkForm;
+    </script>
 </body>
 
 </html>
