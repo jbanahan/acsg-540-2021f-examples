@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>DOM Example</title>
+
+    <style type="text/css">
+        .red {
+            color: red;
+        }
+
+        h1, p, em {
+            border: 1px solid black;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Function definition in head called from event on element
+        function hoverEm() {
+            alert("You hovered over the em");
+        }
+
+        function clickP() {
+            alert("You clicked the p");
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Event handler via attribute on element -->
+    <h1 onclick="alert('You clicked on the h1');">DOM Example</h1>
+    <p id="theP">
+        Sed massa mi, ultrices sed quam a, interdum interdum purus. Vivamus metus turpis, aliquet et dolor id, elementum gravida elit. Praesent gravida enim massa, bibendum fermentum quam euismod sed. Nunc quis ex nibh. Cras sed lobortis justo, at pellentesque metus. Vivamus non metus aliquet, placerat tortor ut, rutrum ipsum. Integer consectetur, massa non posuere maximus, sem erat sodales sapien, sit amet <em id="theEM" class="red" onmouseover="hoverEm();">pellentesque</em> turpis sem nec metus. Suspendisse faucibus justo sollicitudin, pharetra lacus a, congue justo. Vivamus felis quam, sagittis in ipsum id, tempus pretium ipsum. In hac habitasse platea dictumst. Etiam volutpat viverra rutrum.
+    </p>
+
+    <script type="text/javascript">
+        var p = document.getElementById("theP");
+        p.onclick = clickP;
+    </script>
+
+</body>
+
+</html>
