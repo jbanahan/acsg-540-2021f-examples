@@ -6,20 +6,18 @@
     <title>Form Validation Example</title>
 
     <script type="text/javascript">
-        function checkForm() {
+        function checkForm(event) {
             if (document.getElementById("txtFirstName").value == "") {
-                return false;
+                event.preventDefault();
             }
 
             if (document.getElementById("txtLastName").value == "") {
-                return false;
+                event.preventDefault();
             }
 
             if (document.getElementById("txtEmail").value == "") {
-                return false;
+                event.preventDefault();
             }
-
-            return true;
         }
     </script>
 </head>
@@ -40,7 +38,7 @@
 
     <script type="text/javascript">
         var input = document.getElementById("theForm");
-        input.onsubmit = checkForm;
+        input.addEventListener("submit", checkForm, false);
     </script>
 </body>
 
