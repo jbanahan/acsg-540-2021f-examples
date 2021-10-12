@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Form Validation Example</title>
+    <title>JS Placement Example</title>
 
     <script type="text/javascript">
         function checkForm() {
@@ -25,10 +25,15 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        var input = document.getElementById("theForm");
+        input.onsubmit = checkForm;
+    </script>
+    
     <h1>Registration Form</h1>
     <p>All fields are required</p>
     <!-- <form method="get" id="theForm" onsubmit="return checkForm();"> -->
-    <form method="get" id="theForm"></form>
+    <form method="get" id="theForm">
         <label for="txtFirstName">First Name: </label>
         <input type="text" name="txtFirstName" id="txtFirstName" /><br />
         <label for="txtLastName">Last Name: </label>
@@ -37,11 +42,6 @@
         <input type="text" name="txtEmail" id="txtEmail" /><br />
         <input type="submit" id="btnSubmit" value="register" />
     </form>
-
-    <script type="text/javascript">
-        var input = document.getElementById("theForm");
-        input.onsubmit = checkForm;
-    </script>
 </body>
 
 </html>
