@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Form Validation Example</title>
+
+    <script type="text/javascript">
+        function checkForm(event) {
+            if (document.getElementById("txtFirstName").value == "") {
+                event.preventDefault();
+            }
+
+            if (document.getElementById("txtLastName").value == "") {
+                event.preventDefault();
+            }
+
+            if (document.getElementById("txtEmail").value == "") {
+                event.preventDefault();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Registration Form</h1>
+    <p>All fields are required</p>
+    <!-- <form method="get" id="theForm" onsubmit="return checkForm();"> -->
+    <form method="get" id="theForm">
+        <label for="txtFirstName">First Name: </label>
+        <input type="text" name="txtFirstName" id="txtFirstName" /><br />
+        <label for="txtLastName">Last Name: </label>
+        <input type="text" name="txtLastName" id="txtLastName" /><br />
+        <label for="txtEmail">Email: </label>
+        <input type="text" name="txtEmail" id="txtEmail" /><br />
+        <input type="submit" id="btnSubmit" value="register" />
+    </form>
+
+    <script type="text/javascript">
+        var input = document.getElementById("theForm");
+        input.addEventListener("submit", checkForm, false);
+    </script>
+</body>
+
+</html>
