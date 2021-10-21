@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dynamic Styles</title>
+    <script type="text/javascript">
+        function changeHeaderColor(event) {
+            event.currentTarget.style.color = "plum";
+        }
+
+        function changeParaFont(e) {
+            e.currentTarget.style.fontFamily = "Times New Roman";
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="heading">A Heading</h1>
+    <p id="paragraph" style="color: seagreen;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod, nulla ac lacinia faucibus, sapien magna condimentum tortor, tincidunt bibendum diam nulla a lorem. Aliquam erat volutpat. Nullam quis facilisis erat. Suspendisse blandit ligula ut porta porttitor. Vestibulum quis enim in tellus tristique venenatis et et massa. Aenean interdum eros non orci posuere consequat. Nunc auctor felis a lacinia ornare. Morbi non tincidunt felis, at vehicula massa. Morbi turpis massa, porta a tincidunt sit amet, finibus at elit. Aenean ultricies lorem molestie, feugiat sapien nec, dictum urna. Curabitur eget felis sem. Nunc accumsan tristique mattis. Fusce imperdiet orci massa, ac semper leo tristique eu.
+    </p>
+
+    <script type="text/javascript">
+        var heading = document.getElementById("heading");
+        var para = document.getElementById("paragraph");
+        var originalFont = para.style.fontFamily;
+
+        heading.style.color = "red";
+
+        heading.addEventListener("click", changeHeaderColor, false);
+        para.addEventListener("mouseover", changeParaFont, false);
+    </script>
+</body>
+
+</html>

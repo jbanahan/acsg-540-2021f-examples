@@ -1,0 +1,15 @@
+table, td, th {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+}
+
+.read-only {
+    background-color: #cccccc;
+}
+
+.pull-right {
+    text-align: right;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Dynamic Values</title>
+
+    <link href="./style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h1>Harware Store</h1>
+    <form method="POST" onsubmit="return false;">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Cost</th>
+                <th>Quantity</th>
+                <th>Item Total</th>
+            </tr>
+            <tr>
+                <td>Snow Blower</td>
+                <td>$559.99</td>
+                <td class="pull-right"><input type="text" name="txtQty" id="txtQty" size="3" /></td>
+                <td class="pull-right read-only">$ <input type="text" name="txtSubTotal" id="txtSubTotal" size="3" readonly/></td>
+            </tr>
+            <tr>
+                <td colspan="3">Tax (5%)</td>
+                <td class="pull-right read-only">
+                    $ <input type="text" name="txtTax" id="txtTax" size="10" readonly/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">Total</td>
+                <td class="pull-right read-only">
+                    $ <input type="text" name="txtTotal" id="txtTotal" size="10" readonly/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>
