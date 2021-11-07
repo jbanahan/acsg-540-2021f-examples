@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>PHP Forms With Checkboxes</title>
+    </head>
+
+    <body>
+        <form method="POST" action="checkbox.php">
+            <table>
+                <tr>
+                    <td><label><input type="checkbox" name="fruit[]" value="ap" /> Apple</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="fruit[]" value="pr" /> Pear</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="fruit[]" value="ki" /> Kiwi</label></td>
+                </tr>
+                <tr>
+                    <td><label><input type="checkbox" name="fruit[]" value="ba" /> Banana</label></td>
+                </tr>
+            </table>
+            <input type="submit" value="Buy" />
+            <input type="reset" value="Reset" />
+        </form>
+    </body>
+</html>
