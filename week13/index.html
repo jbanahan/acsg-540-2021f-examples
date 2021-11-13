@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Ajax with PHP</title>
+        <script type="text/JavaScript" src="example.js"></script>
+    </head>
+    <body>
+        <h1>For some reason we want this info about you!</h1>
+        <form action = "">
+            <table>
+                <tr>
+                    <td>Your Name: </td>  
+                    <td><input type="text" name="name" size="30" /></td>
+                </tr>
+                <tr>
+                    <td>Vehicle Model: </td>
+                    <td><input id="model" type= "text" name="model" size="30" onblur="getMake(this.value);" /></td>
+                </tr>
+                <tr>
+                    <td>Vehicle Make: </td>
+                    <td><input id="make" type="text" name="make" size="30" /></td>
+                </tr>
+            </table>         
+            <p>
+                <input type = "submit"  value = "Submit Info" />
+                <input type = "reset"  value = "Clear Info" />
+            </p>
+        </form>
+    </body>
+</html>
