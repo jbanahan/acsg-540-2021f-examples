@@ -22,7 +22,7 @@
         try {
             $result = $api_instance->gifsSearchGet($api_key, $q, $limit, $offset, $rating, $lang, $fmt);
             //print_r($result);
-            // print '<img src=' . $result["data"][0]["url"] . ' />';
+            // print '<img src=' . $result["data"][0]["url"] . ' />'; Not going to work!
 
             // See what options are available here: https://github.com/Giphy/giphy-php-client/blob/master/docs/Model/Gif.md
             // If we really want to serve the images ourselves we have to first download the image onto the server and then serve it
