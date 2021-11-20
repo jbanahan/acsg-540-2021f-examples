@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Weather Final</title>
+    </head>
+    <body>
+        <h1>Weather forcast for your area ACSG 540</h1>
+        <form action="weather.php">
+            <table>
+                <tr>
+                    <td colspan="3">
+                        <label>Street Address: <input type="text" name="address[]" placeholder="Street" size="30" /></label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>City: <input type="text" name="address[]" placeholder="City" size="10"/></label></td>
+                    <td><label>State: <input type="text" name="address[]" placeholder="State" size="2" /></label></td>
+                    <td><label>Zip Code: <input type="text" name="address[]" placeholder="Zip" size="5" /></label></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+        </form>
+    </body>
+</html>
