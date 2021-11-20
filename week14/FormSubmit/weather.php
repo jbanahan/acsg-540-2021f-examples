@@ -4,7 +4,8 @@ $address = $_GET['address'];
 
 $formattedAddr = urlencode($address[0]).',+'.urlencode($address[1]).',+'.$address[2].',+'. $address[3];
 
-$googleURL = "https://maps.googleapis.com/maps/api/geocode/json?address=$formattedAddr&key=AIzaSyCrB9Fesgas897MQNawfMd5cSnuyzCxppw";
+// I'm using an environment variable to hid my API key from this public repository. I will send it to you if you choose this final
+$googleURL = "https://maps.googleapis.com/maps/api/geocode/json?address=$formattedAddr&key=".$_ENV["GOOGLEAPI"];
 
 // $location = json_decode(file_get_contents($googleURL, false), true);
 

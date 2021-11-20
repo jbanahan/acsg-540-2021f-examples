@@ -11,7 +11,8 @@
         require_once(__DIR__ . '/vendor/giphy-php-client/autoload.php');
 
         $api_instance = new GPH\Api\DefaultApi();
-        $api_key = "tJfJK5i27FhCcC2XVmRPTy6GWZiJIP69"; // string | Giphy API Key.
+        // You will need to aquire your own API key. I will share mine if you have issues.
+        $api_key = $_ENV["GIPHYAPI"]; // string | Giphy API Key.
         $q = "cheeseburgers"; // string | Search query term or prhase.
         $limit = 2; // int | The maximum number of records to return.
         $offset = 0; // int | An optional results offset. Defaults to 0.
